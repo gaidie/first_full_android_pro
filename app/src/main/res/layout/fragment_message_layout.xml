@@ -1,0 +1,196 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:background="@android:color/white"
+                    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/color_e3e3e3">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="消息"
+            android:textSize="22sp"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/message_layout"
+        android:padding="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="wrap_content"
+            android:id="@+id/message_view"
+            android:src="@drawable/bg_message_unread"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:id="@+id/unread_tip_view"
+            android:background="@drawable/bg_message_tip"
+            android:gravity="center"
+            android:text="10"
+            android:textColor="@android:color/white"
+            android:textSize="12sp"
+            android:visibility="gone"
+            />
+
+        <TextView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:id="@+id/unread_message_view"
+            android:layout_alignTop="@id/message_view"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/message_view"
+            android:background="@drawable/bg_message_tip"
+            android:text="未读信息"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tip_message_view"
+            android:layout_alignBottom="@id/message_view"
+            android:layout_alignLeft="@id/unread_tip_view"
+            android:layout_marginBottom="5dp"
+            android:layout_toRightOf="@id/message_view"
+            android:background="@drawable/bg_message_tip"
+            android:text="未读信息详情"
+            android:textColor="@color/color_333333"
+            android:textSize="14sp"
+            />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="20dp"
+        android:padding="15dp"/>
+
+    <RelativeLayout
+        android:id="@+id/zan_layout"
+        android:padding="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="wrap_content"
+            android:id="@+id/zan_view"
+            android:src="@drawable/bg_message_zan"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/zan_message_view"
+            android:layout_alignTop="@id/zan_view"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/zan_view"
+            android:text="收到的赞"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            />
+        <TextView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:id="@+id/zan_tip_view"
+            android:layout_toLeftOf="@id/zan_message_view"
+            android:background="@drawable/bg_message_tip"
+            android:gravity="center"
+            android:text="2"
+            android:textColor="@android:color/white"
+            android:textSize="12sp"
+            android:visibility="gone"
+            />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/zan_message_info_view"
+            android:layout_alignBottom="@id/zan_view"
+            android:layout_alignLeft="@id/zan_message_view"
+
+            android:layout_marginBottom="5dp"
+            android:layout_toRightOf="@id/zan_message_view"
+            android:text="还没有收到的赞"
+            android:textColor="@color/color_333333"
+            android:textSize="14sp"
+            />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="20dp"
+        android:background="@color/color_cdcdcd"/>
+
+    <RelativeLayout
+        android:id="@+id/iooc_layout"
+        android:padding="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="wrap_content"
+            android:id="@+id/iooc_view"
+            android:src="@drawable/bg_message_imooc"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/iooc_message_view"
+            android:layout_alignTop="@id/iooc_view"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/iooc_view"
+            android:text="慕课网"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            />
+        <TextView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:id="@+id/tip_view"
+            android:layout_toLeftOf="@id/iooc_message_view"
+            android:background="@drawable/bg_message_tip"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:textSize="12sp"
+            android:visibility="gone"
+            />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tip_iooc_view"
+            android:layout_alignBottom="@id/iooc_view"
+            android:layout_alignLeft="@id/iooc_message_view"
+            android:layout_marginBottom="5dp"
+            android:layout_toRightOf="@id/iooc_view"
+            android:text="慕女神喜欢勤奋努力的孩子"
+            android:textColor="@color/color_333333"
+            android:textSize="14sp"
+            />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="20dp"
+        android:background="@color/color_cdcdcd"/>
+</LinearLayout>
