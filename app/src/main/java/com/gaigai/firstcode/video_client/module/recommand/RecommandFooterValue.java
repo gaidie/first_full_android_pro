@@ -23,8 +23,7 @@ public class RecommandFooterValue extends BaseModel {
     public String from;
     public String imageOne;
     public String imageTwo;
-    public String destaionUrl;
-
+    public String destationUrl;
     public String getTitle() {
         return title;
     }
@@ -65,11 +64,11 @@ public class RecommandFooterValue extends BaseModel {
         this.imageTwo = imageTwo;
     }
 
-    public String getDestaionUrl() {
-        return destaionUrl;
+    public String getDestationUrl() {
+        return destationUrl;
     }
 
-    public void setDestaionUrl(String destaionUrl) {
-        this.destaionUrl = destaionUrl;
+    public void setDestationUrl(String destationUrl) {
+        this.destationUrl = destationUrl;
     }
 }

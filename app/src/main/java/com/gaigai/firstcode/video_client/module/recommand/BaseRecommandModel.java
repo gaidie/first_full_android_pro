@@ -7,8 +7,10 @@ import com.gaigai.firstcode.video_client.module.BaseModel;
  */
 
 public class BaseRecommandModel extends BaseModel {
-    public String resultCode;
-    public String msg;
-    public RecommandModel mRecommandModel;
+    public String ecode;
+    public String emsg;
+    public RecommandModel data;
+
+
 
 }

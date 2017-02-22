@@ -59,6 +59,7 @@ public class CommonJsonCallBack implements Callback{
             @Override
             public void run() {
                 mHttpCallBack.onError(new HttpException(NET_ERROR, e));
+                Log.e(TAG, "run: "+ e.getMessage());
             }
         });
 

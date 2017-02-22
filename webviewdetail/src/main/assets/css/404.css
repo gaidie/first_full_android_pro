@@ -1,0 +1,60 @@
+.me404 {
+  width: 1000px;
+  height: 480px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -400px;
+  margin-top: -240px;
+}
+.st0 {
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+  fill: #E8EBED;
+}
+.st1 {
+  fill: #FFFFFF;
+  stroke: #89949B;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 10;
+}
+.st2 {
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+  fill: #DBDFE1;
+}
+.st3 {
+  fill: #FFFFFF;
+}
+.st4 {
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+  fill: #E8EBED;
+  stroke: #89949B;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 10;
+}
+.st5 {
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+  fill: #FFFFFF;
+  stroke: #89949B;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 10;
+}
+.st6 {
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+  fill: none;
+  stroke: #89949B;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 10;
+}

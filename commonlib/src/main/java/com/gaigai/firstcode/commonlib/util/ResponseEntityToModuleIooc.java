@@ -1,7 +1,5 @@
 package com.gaigai.firstcode.commonlib.util;
 
-import android.util.Log;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -11,13 +9,11 @@ import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 
-import static android.content.ContentValues.TAG;
-
-
 /**
- *
+ * Created by ga on 2017/2/22.
  */
-public class ResponseEntityToModule {
+
+public class ResponseEntityToModuleIooc {
 
     public static Object parseJsonToModule(String jsonContent, Class<?> clazz) {
         Object moduleObj = null;
@@ -50,7 +46,6 @@ public class ResponseEntityToModule {
     }
 
 
-
     private static void setFieldValue(Object moduleObj, JSONObject jsonObj, Class<?> clazz)
             throws IllegalArgumentException, IllegalAccessException, JSONException, InstantiationException {
         if (clazz.getSuperclass() != null) {
@@ -59,7 +54,6 @@ public class ResponseEntityToModule {
         Field[] fields = clazz.getDeclaredFields();
         Class<?> cls;
         String name;
-
         for (Field f : fields) {
             f.setAccessible(true);
             cls = f.getType();
@@ -67,14 +61,10 @@ public class ResponseEntityToModule {
             if (!jsonObj.has(name) || jsonObj.isNull(name)) {
                 continue;
             }
-            if("data".equals(name)){
-                Log.i(TAG, "setFieldValue: " + "你看");
-            }
             if (cls.isPrimitive() || isWrappedPrimitive(cls))// 锟斤拷锟斤拷腔锟斤拷锟斤拷锟斤拷锟絙oolean,byte,char,short,int,long,float,double,void
             {
                 setPrimitiveFieldValue(f, moduleObj, jsonObj.get(name));
             } else {
-
                 if (cls.isAssignableFrom(String.class)) {
                     f.set(moduleObj, String.valueOf(jsonObj.get(name)));
                 } else if (cls.isAssignableFrom(ArrayList.class)) {
@@ -83,10 +73,10 @@ public class ResponseEntityToModule {
                     Object obj = parseJsonObjectToModule(jsonObj.getJSONObject(name), cls.newInstance().getClass());
                     f.set(moduleObj, obj);
                 }
-
             }
         }
     }
+
 
 
     private static ArrayList<Object> parseJsonArrayToList(Field field, String fieldName, Object moduleObj,
@@ -160,4 +150,5 @@ public class ResponseEntityToModule {
         }
         return false;
     }
+
 }
